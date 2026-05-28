@@ -36,6 +36,28 @@ public class Heap {
 
     }
 
+    private static int getParent(int idx) {
+        return (idx - 1) / 2;
+    }
+
+    private static int getLeftChild(int idx) {
+        return idx * 2 + 1;
+    }
+
+    private static int getRightChild(int idx) {
+        return idx * 2 + 2;
+    }
+
+    private static void siftUp(int idx) {
+        while (heap.get(idx) > heap.get(getParent(idx))) {
+            heap.swap(heap.get(idx), heap.get(getParent(idx)));
+        }        
+    }
+
+    private static void swap() {
+        
+    }
+
     public int pop(){
         return 0;
     }

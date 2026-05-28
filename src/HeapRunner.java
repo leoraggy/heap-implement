@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -35,7 +36,7 @@ public class HeapRunner {
                 try {
                     value = Integer.parseInt(input);
                 } catch (NumberFormatException e) {
-                    System.out.println("That wasn't a valid integer. Try again.");
+                    System.out.println("That wasn't a valid integer .Try again.");
                     continue;
                 }
  
