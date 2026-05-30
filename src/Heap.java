@@ -26,14 +26,15 @@ import java.util.List;
  *  - hold private instance variables
  */
 public class Heap {
-    private List<Integer> heap;
+    public static List<Integer> heap;
     
     public Heap(){
         this.heap = new ArrayList<>();
     }
 
-    public void add(){
-
+    public void add(int num){
+        heap.add(num);
+        siftUp(heap.size()-1);
     }
 
     private static int getParent(int idx) {
@@ -49,16 +50,20 @@ public class Heap {
     }
 
     private static void siftUp(int idx) {
-        while (heap.get(idx) > heap.get(getParent(idx))) {
-            heap.swap(heap.get(idx), heap.get(getParent(idx)));
+        int parentIndex = getParent(idx);
+
+        while (heap.get(idx) > heap.get(parentIndex)) {
+            swap(idx, getParent(idx));
         }        
     }
 
-    private static void swap() {
-        
+    private static void swap(int child, int parent) {
+        int temp = heap.get(child);
+        heap.set(child, heap.get(parent));
+        heap.set(parent,temp);
     }
 
-    public int pop(){
+    public int pop(){   
         return 0;
     }
 
