@@ -16,7 +16,25 @@ public class HeapTest {
         assertEquals(expected, actual);
     }
 
-    
+
+    @Test
+    public void testSizeNoElements(){
+        Heap minHeap = new Heap();
+
+        int expected = 0;
+        int actual = minHeap.size();
+
+        assertEquals(expected, actual);
+    }
 
 
+    @Test
+    public void testSize(){
+        Heap minHeap = new Heap();
+
+        int expected = 0;
+        int actual = minHeap.size();
+
+        assertEquals(expected, actual);
+    }
 }
