@@ -93,4 +93,8 @@ public class Heap {
     public boolean isEmpty() {
         return heap.isEmpty();
     }
+
+    public List<Integer> toList() {
+        return new ArrayList<>(this.heap); 
+}
 }

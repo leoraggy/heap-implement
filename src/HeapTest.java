@@ -50,5 +50,21 @@ public class HeapTest {
         assertEquals(expected, actual);
     }
 
-    
+    @Test
+    public void testOrderOfMinHeap(){
+        Heap minHeap = new Heap();
+
+        int[] elements = {20, 15, 30, 5, 10, 40, 2, 12};
+        for (int num : elements) {
+            minHeap.add(num);
+        }
+
+        int[] expected = {2, 10, 5, 12, 15, 40, 30, 20};
+
+        assertArrayEquals(minHeap.toList(), expected);
+    }
+
+
+
+
 }
