@@ -50,7 +50,7 @@ public class Heap {
 
     private static void siftUp(int idx) {
         while (heap.get(idx) > heap.get(getParent(idx))) {
-            heap.swap(heap.get(idx), heap.get(getParent(idx)));
+            swap(idx, heap.get(getParent(idx)));
         }        
     }
 
