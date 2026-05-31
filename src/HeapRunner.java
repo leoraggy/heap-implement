@@ -22,6 +22,7 @@ public class HeapRunner {
         Scanner scanner = new Scanner(System.in);
 
         // TODO: Construct your Heap here.
+        Heap heap = new Heap();
 
         System.out.println("=== Heap Tester ===");
 
@@ -42,20 +43,35 @@ public class HeapRunner {
  
                 // TODO: Call your "add" method on the heap, passing in 'value'.
                 // TODO: Print message letting user know value was added
- 
+                heap.add(value);
+                System.out.println("Successfully added " + value + " into heap");
+
             } else if (choice.equals("p") || choice.equals("pop")) {
                 // TODO: Call your "pop" method and print the result.
                 // Properly handle the case of an empty heap!
+                if (!heap.isEmpty()) {
+                    int temp = heap.pop();
+                    System.out.println("Just popped " + temp + " from heap");
+                } else {
+                    System.out.println("Sorry, you can't remove from empty heaps");
+                }
 
             } else if (choice.equals("k") || choice.equals("peek")) {
                 // TODO: Call your "peek" method and print the result
                 // Properly handle the case of an empty heap!
+                if (!heap.isEmpty()) {
+                    System.out.println("Peeking into the heap  " + heap.peek());
+                } else {
+                    System.out.println("Sorry, you can't peek from empty heaps");
+                }                
 
             } else if (choice.equals("s") || choice.equals("size")) {
                 // TODO: Call your "size" method and print the result
+                System.out.println("Heap size is: " + heap.size());
 
             } else if (choice.equals("e") || choice.equals("empty")) {
                 // TODO: Call your "isEmpty" method and print the result
+                System.out.println("Heap Empty = " + heap.isEmpty());
 
             } else if (choice.equals("q") || choice.equals("quit")) {
                 break;
